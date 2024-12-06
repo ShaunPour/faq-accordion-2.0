@@ -1,0 +1,64 @@
+@import url('https://fonts.google.com/specimen/Work+Sans');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light--pink: hsl(275, 100%, 97%);
+    --Grayish--purple: hsl(292, 16%, 49%);
+    --Dark--purple: hsl(292, 42%, 14%);
+}
+
+body {
+    background-color: var(--Light--pink);
+    background-image: url('../assets/images/background-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Work Sans', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+img, svg {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 0;
+}
+
+button:hover {
+    background-color: var(--Dark--purple);
+    color: var(--White);
+}
+
+.container {
+    background-color: var(--White);
+    max-width: 300px;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    position: relative;
+    top: 17rem;
+}
+
+.faq-title {
+    display: flex;
+    gap: 2rem;
+}
