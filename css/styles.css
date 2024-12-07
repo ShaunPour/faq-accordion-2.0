@@ -55,10 +55,14 @@ button:hover {
     padding: 1.5rem;
     border-radius: 1rem;
     position: relative;
-    top: 17rem;
+    top: 10rem;
 }
 
 .faq-title {
     display: flex;
     gap: 2rem;
+}
+
+.minus-icon,.accordion-description {
+    display: none;
 }
