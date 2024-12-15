@@ -25,7 +25,6 @@ body {
 }
 
 img, svg {
-    max-width: 100%;
     display: block;
 }
 
@@ -55,7 +54,7 @@ button:hover {
     padding: 1.5rem;
     border-radius: 1rem;
     position: relative;
-    top: 10rem;
+    top: 3rem;
 }
 
 .faq-title {
@@ -65,4 +64,12 @@ button:hover {
 
 .minus-icon,.accordion-description {
     display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }
