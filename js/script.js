@@ -1,11 +1,20 @@
-const minusBtn = document.querySelectorAll('.minus-icon');
-const plusBtn = document.querySelectorAll('.plus-icon');
-const parentBtn = document.querySelectorAll('.btn');
-const description = document.querySelectorAll('.accordion-description');
+const accordionBtns = document.querySelectorAll('.accordion-btn');
 
+accordionBtns.forEach((btn => {
+    btn.addEventListener('click', function () {
+        this.classlist.toggle('active');
+        const accordionDescription = this.nextElementSibling;
+        const plusIcon = this.querySelector('.plus-icon');
+        const minusIcon = this.querySelector('.minus-icon');
 
-plusBtn.addEventListener('click', function () {
-    const index = plusBtn.indexOf(this);
-    description[index].style.display = 'block';
-    parentBtn[index].classList.add('active');
-});
+        if (accordionDescription.style.display === 'none') {
+            accordionDescription.style.maxHeight = null;
+            plusIcon.style.display = 'block';
+            minusIcon.style.display = 'none';
+        } else {
+            accordionDescription.style.maxHeight = accordionDescription.scrollHeight + 'px';
+            plusIcon.style.display = 'none';
+            minusIcon.style.display = 'block';
+        }
+    });
+}));
